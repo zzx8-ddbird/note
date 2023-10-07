@@ -85,3 +85,17 @@
 ### history
 - 模拟浏览器的history的一个库，V6版本内置  
  
+### react 版本
+- v15 stack reconciler
+    - 从根节点更新
+- 16.9 ~ 17.0.2 fiber reconciler
+    - 异步可中断的更新
+- 18
+    - concurrent 模式 ++
+
+### 双缓存
+
+### 流程
+- beginWork：创建 workInPrograssFiber
+使用 v-dom 和 current fiber 对比， 向下调和
+期间会执行 函数组件、类组件，diff 子节点，打上不同的 effectTag
